@@ -1,245 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Harini Ramalingam | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Harini Ramalingam | Research Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+html { scroll-behavior: smooth; }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #ffffff;
-      color: #222;
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f9fc;
+  color: #1f2937;
+  line-height: 1.6;
+}
 
-    nav {
-      position: fixed;
-      width: 100%;
-      background: #ffffff;
-      border-bottom: 1px solid #eee;
-      padding: 10px 0;
-      z-index: 1000;
-    }
+/* ---------- NAV ---------- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+}
 
-    nav ul li {
-      margin: 0 15px;
-    }
+nav li { margin: 0 16px; }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-    }
+nav a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+}
 
-    nav ul li a:hover {
-      color: #007acc;
-    }
+nav a:hover { color: #2563eb; }
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 80px 20px;
-    }
+/* ---------- HERO ---------- */
+#hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+    url("cover.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 60px;
+}
 
-    #hero {
-      padding-top: 120px;
-      text-align: center;
-    }
+#hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
 
-    #hero h1 {
-      font-size: 2.6em;
-      margin-bottom: 10px;
-    }
+#hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+#hero p { font-size: 1.3rem; max-width: 700px; margin: auto; }
 
-    #hero p {
-      font-size: 1.2em;
-      color: #555;
-    }
+/* ---------- SECTIONS ---------- */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
 
-    h2 {
-      border-bottom: 2px solid #007acc;
-      display: inline-block;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
+h2 {
+  font-size: 1.8rem;
+  color: #1d4ed8;
+  margin-bottom: 20px;
+}
 
-    .card {
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 6px;
-      background: #fafafa;
-    }
+/* ---------- PROJECTS ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
 
-    .card h3 {
-      margin-top: 0;
-    }
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .card a {
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
-    }
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
 
-    ul {
-      padding-left: 20px;
-    }
+.card h3 { margin-top: 0; }
 
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      background: #f5f5f5;
-      font-size: 0.9em;
-    }
-  </style>
+.card a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ---------- LISTS ---------- */
+ul { padding-left: 20px; }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  #hero h1 { font-size: 2.2rem; }
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<ul>
+  <li><a href="#about">About</a></li>
+  <li><a href="#research">Research</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#education">Education</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
-<section id="hero">
-  <h1>Harini Ramalingam</h1>
-  <p>Exploring Human Behavior Through Data & Models</p>
-</section>
-
-<section id="about">
-  <h2>About</h2>
-  <p>
-    I am a Computer Science graduate with a Master’s degree and professional
-    experience as a Data Engineer, working at the intersection of large-scale
-    data systems, machine learning, and behavioral analytics. My interests lie
-    in applying computational and statistical methods to study human behavior,
-    mental health, and cognitive processes using real-world data.
-  </p>
-
-  <p>
-    I have worked on both industry-scale data pipelines and research-driven
-    machine learning projects, including wearable activity analysis and
-    depression modeling. I am currently preparing for PhD training in
-    computational psychology, cognitive science, and behavioral data science.
-  </p>
-</section>
-
-<section id="research">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Computational modeling of emotion and behavior</li>
-    <li>Digital mental health and wearable-based behavioral analysis</li>
-    <li>Sleep, cognition, and mental health</li>
-    <li>Interpretable and ethical machine learning</li>
-    <li>Human-centered data science</li>
-  </ul>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="projects">
-    <div class="card">
-      <h3>Actigraphy-Based Modeling of Depression</h3>
-      <p>
-        Research-oriented analysis of minute-level wearable actigraphy data from
-        clinical and control populations. Extracted interpretable behavioral
-        rhythm features and modeled their relationship to depression status and
-        symptom severity using transparent statistical methods.
-      </p>
-      <a href="https://github.com/hariniramalingam2320-beep/actigraphy-depression-modeling" target="_blank">
-        View on GitHub →
-      </a>
-    </div>
+<section id="hero" class="visible">
+  <div>
+    <img src="profile.jpg" alt="Harini Ramalingam">
+    <h1>Harini Ramalingam</h1>
+    <p>
+      Exploring Human Behavior Through Data & Models<br>
+      Research-oriented Data Scientist | Behavioral & Mental Health Analytics
+    </p>
   </div>
 </section>
 
+<section id="about">
+<h2>About</h2>
+<p>
+I am a research-driven data scientist with a Master’s degree in Computer Science,
+professional experience as an Azure Data Engineer, and hands-on research experience
+in behavioral and mental health analytics. My work focuses on translating large-scale
+human behavioral data into interpretable scientific insights.
+</p>
+<p>
+I have designed end-to-end analytical pipelines, conducted feature-driven behavioral
+modeling using wearable data, and applied statistical and machine learning methods
+to study cognition, sleep, and depression. I am preparing for PhD training in
+computational psychology, cognitive science, and behavioral data science.
+</p>
+</section>
+
+<section id="research">
+<h2>Research Interests</h2>
+<ul>
+<li>Computational modeling of behavior and emotion</li>
+<li>Digital mental health and wearable sensing</li>
+<li>Sleep, cognition, and psychiatric disorders</li>
+<li>Interpretable machine learning</li>
+<li>Human-centered data science</li>
+</ul>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+
+<div class="card">
+<h3>Actigraphy-Based Modeling of Depression</h3>
+<p>
+Analyzed minute-level wearable activity data from clinical and control populations.
+Extracted interpretable circadian and activity rhythm features and modeled their
+relationship with depression diagnosis and symptom severity.
+</p>
+<a href="https://github.com/hariniramalingam2320-beep/actigraphy-depression-modeling" target="_blank">
+View on GitHub →
+</a>
+</div>
+
+<div class="card">
+<h3>Sleep Deprivation, Cognition & Emotional Regulation</h3>
+<p>
+Explored how sleep duration, sleep quality, and daytime sleepiness relate to executive
+control, vigilance, and working memory using Stroop, N-Back, and PVT task data.
+</p>
+<a href="https://github.com/hariniramalingam2320-beep/sleep-deprivation-cognition-emotion" target="_blank">
+View on GitHub →
+</a>
+</div>
+
+</div>
+</section>
+
 <section id="experience">
-  <h2>Experience</h2>
+<h2>Experience</h2>
+<p><strong>Azure Data Engineer — CVS Pharmacy</strong></p>
+<ul>
+<li>Built real-time streaming pipelines using Kafka, Azure Databricks, and PySpark</li>
+<li>Designed large-scale data architectures for analytics and ML workflows</li>
+<li>Worked with time-series and behavioral datasets at production scale</li>
+</ul>
 
-  <p>
-    <strong>Azure Data Engineer — CVS Pharmacy</strong><br>
-    July 2024 – June 2025
-  </p>
-  <ul>
-    <li>Built real-time streaming pipelines using Kafka and Azure Databricks</li>
-    <li>Processed large-scale time-series and behavioral datasets using PySpark</li>
-    <li>Designed ML-ready lakehouse architectures and analytics workflows</li>
-  </ul>
-
-  <p>
-    <strong>Graduate Assistant — Data Engineering & Analytics</strong><br>
-    Rowan University (2023–2024)
-  </p>
-  <ul>
-    <li>Supported research projects involving behavioral and cognitive datasets</li>
-    <li>Built analytical dashboards and assisted with data preprocessing</li>
-  </ul>
+<p><strong>Graduate Assistant — Rowan University</strong></p>
+<ul>
+<li>Supported research projects involving behavioral and cognitive data</li>
+<li>Developed analytical pipelines and dashboards</li>
+</ul>
 </section>
 
 <section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Python, NumPy, Pandas, PySpark, SQL</li>
-    <li>Machine Learning & Statistical Modeling</li>
-    <li>Behavioral and time-series data analysis</li>
-    <li>Data Engineering: Kafka, Delta Lake, ETL/ELT</li>
-    <li>Cloud Platforms: Azure, AWS, GCP</li>
-  </ul>
+<h2>Skills</h2>
+<ul>
+<li>Python, Pandas, NumPy, PySpark, SQL</li>
+<li>Statistical Modeling & Machine Learning</li>
+<li>Time-series & behavioral data analysis</li>
+<li>Kafka, Delta Lake, ETL pipelines</li>
+<li>Azure, AWS, GCP</li>
+</ul>
 </section>
 
 <section id="education">
-  <h2>Education</h2>
-  <p>
-    <strong>M.S. in Computer Science</strong><br>
-    Rowan University, USA (2023–2024)
-  </p>
+<h2>Education</h2>
+<p>
+<strong>M.S. in Computer Science</strong><br>
+Rowan University, USA<br>
+GPA: <strong>3.8 / 4.0</strong>
+</p>
 
-  <p>
-    <strong>B.E. in Computer Science and Engineering</strong><br>
-    Muthayammal Engineering College, India (2017–2021)
-  </p>
+<p>
+<strong>B.E. in Computer Science and Engineering</strong><br>
+Muthayammal Engineering College, India<br>
+GPA: <strong>8.6 / 10</strong>
+</p>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>
-    GitHub:
-    <a href="https://github.com/hariniramalingam2320-beep" target="_blank">
-      github.com/hariniramalingam2320-beep
-    </a>
-  </p>
+<h2>Contact</h2>
+<p>
+GitHub:
+<a href="https://github.com/hariniramalingam2320-beep" target="_blank">
+github.com/hariniramalingam2320-beep
+</a>
+</p>
 </section>
 
 <footer>
-  © 2026 Harini Ramalingam
+© 2026 Harini Ramalingam
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+sections.forEach(section => observer.observe(section));
+</script>
 
 </body>
 </html>
