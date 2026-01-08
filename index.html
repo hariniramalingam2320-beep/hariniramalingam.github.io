@@ -11,9 +11,9 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f7f9fc;
+  background: #f6f8fb;
   color: #1f2937;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 /* ---------- NAV ---------- */
@@ -21,7 +21,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.96);
   border-bottom: 1px solid #e5e7eb;
   z-index: 1000;
 }
@@ -31,10 +31,10 @@ nav ul {
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 12px 0;
+  padding: 10px 0;
 }
 
-nav li { margin: 0 16px; }
+nav li { margin: 0 14px; }
 
 nav a {
   text-decoration: none;
@@ -46,7 +46,7 @@ nav a:hover { color: #2563eb; }
 
 /* ---------- HERO ---------- */
 #hero {
-  min-height: 100vh;
+  min-height: 85vh;
   background:
     linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
     url("cover.jpg") center/cover no-repeat;
@@ -55,28 +55,36 @@ nav a:hover { color: #2563eb; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 20px 60px;
+  padding: 110px 20px 40px;
 }
 
 #hero img {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   border: 4px solid white;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-#hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
-#hero p { font-size: 1.3rem; max-width: 700px; margin: auto; }
+#hero h1 {
+  font-size: 2.6rem;
+  margin: 0 0 8px;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  max-width: 720px;
+  margin: auto;
+}
 
 /* ---------- SECTIONS ---------- */
 section {
   max-width: 1000px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 32px 20px;
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
+  transform: translateY(18px);
+  transition: all 0.6s ease;
 }
 
 section.visible {
@@ -85,29 +93,34 @@ section.visible {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: #1d4ed8;
-  margin-bottom: 20px;
+  margin: 0 0 14px;
 }
+
+p { margin: 8px 0; }
+
+ul { padding-left: 20px; }
+ul li { margin-bottom: 6px; }
 
 /* ---------- PROJECTS ---------- */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  gap: 22px;
 }
 
 .card {
   background: white;
   border-radius: 10px;
-  padding: 24px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  padding: 22px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.12);
 }
 
 .card h3 { margin-top: 0; }
@@ -118,15 +131,13 @@ h2 {
   font-weight: bold;
 }
 
-/* ---------- LISTS ---------- */
-ul { padding-left: 20px; }
-
 /* ---------- FOOTER ---------- */
 footer {
   background: #0f172a;
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 28px;
+  margin-top: 40px;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -155,8 +166,8 @@ footer {
     <img src="profile.jpg" alt="Harini Ramalingam">
     <h1>Harini Ramalingam</h1>
     <p>
-      Exploring Human Behavior Through Data & Models<br>
-      Research-oriented Data Scientist | Behavioral & Mental Health Analytics
+      “Behavior is the language of the mind; data is how we translate it.”<br><br>
+      Research-Oriented Data Engineer | Behavioral & Mental Health Analytics
     </p>
   </div>
 </section>
@@ -164,16 +175,16 @@ footer {
 <section id="about">
 <h2>About</h2>
 <p>
-I am a research-driven data scientist with a Master’s degree in Computer Science,
-professional experience as an Azure Data Engineer, and hands-on research experience
-in behavioral and mental health analytics. My work focuses on translating large-scale
-human behavioral data into interpretable scientific insights.
+I am a research-oriented data engineer with a Master’s degree in Computer Science and
+professional experience building large-scale data systems. My work focuses on applying
+computational and statistical methods to understand human behavior, mental health,
+and cognitive processes using real-world data.
 </p>
 <p>
-I have designed end-to-end analytical pipelines, conducted feature-driven behavioral
-modeling using wearable data, and applied statistical and machine learning methods
-to study cognition, sleep, and depression. I am preparing for PhD training in
-computational psychology, cognitive science, and behavioral data science.
+I have worked across enterprise software engineering, cloud-scale data pipelines,
+and research-driven behavioral modeling projects, including wearable actigraphy
+analysis and sleep–cognition studies. I am preparing for PhD training in computational
+psychology, cognitive science, and behavioral data science.
 </p>
 </section>
 
@@ -183,7 +194,7 @@ computational psychology, cognitive science, and behavioral data science.
 <li>Computational modeling of behavior and emotion</li>
 <li>Digital mental health and wearable sensing</li>
 <li>Sleep, cognition, and psychiatric disorders</li>
-<li>Interpretable machine learning</li>
+<li>Interpretable and ethical machine learning</li>
 <li>Human-centered data science</li>
 </ul>
 </section>
@@ -195,8 +206,8 @@ computational psychology, cognitive science, and behavioral data science.
 <div class="card">
 <h3>Actigraphy-Based Modeling of Depression</h3>
 <p>
-Analyzed minute-level wearable activity data from clinical and control populations.
-Extracted interpretable circadian and activity rhythm features and modeled their
+Analyzed minute-level wearable actigraphy data from clinical and control populations.
+Extracted interpretable circadian and activity-rhythm features and modeled their
 relationship with depression diagnosis and symptom severity.
 </p>
 <a href="https://github.com/hariniramalingam2320-beep/actigraphy-depression-modeling" target="_blank">
@@ -207,8 +218,8 @@ View on GitHub →
 <div class="card">
 <h3>Sleep Deprivation, Cognition & Emotional Regulation</h3>
 <p>
-Explored how sleep duration, sleep quality, and daytime sleepiness relate to executive
-control, vigilance, and working memory using Stroop, N-Back, and PVT task data.
+Investigated how sleep duration, sleep quality, and daytime sleepiness relate to
+executive control, vigilance, and working memory using Stroop, N-Back, and PVT task data.
 </p>
 <a href="https://github.com/hariniramalingam2320-beep/sleep-deprivation-cognition-emotion" target="_blank">
 View on GitHub →
@@ -220,17 +231,25 @@ View on GitHub →
 
 <section id="experience">
 <h2>Experience</h2>
+
 <p><strong>Azure Data Engineer — CVS Pharmacy</strong></p>
 <ul>
-<li>Built real-time streaming pipelines using Kafka, Azure Databricks, and PySpark</li>
-<li>Designed large-scale data architectures for analytics and ML workflows</li>
-<li>Worked with time-series and behavioral datasets at production scale</li>
+<li>Built real-time and batch data pipelines using Kafka, Azure Databricks, and PySpark</li>
+<li>Designed analytics-ready lakehouse architectures for ML workflows</li>
+<li>Worked extensively with large-scale time-series and behavioral datasets</li>
 </ul>
 
 <p><strong>Graduate Assistant — Rowan University</strong></p>
 <ul>
-<li>Supported research projects involving behavioral and cognitive data</li>
-<li>Developed analytical pipelines and dashboards</li>
+<li>Supported research projects involving behavioral and cognitive datasets</li>
+<li>Developed data preprocessing pipelines and analytical dashboards</li>
+</ul>
+
+<p><strong>Systems Engineer — Tata Consultancy Services (TCS)</strong></p>
+<ul>
+<li>Worked on enterprise-scale software and data systems</li>
+<li>Supported data validation, processing, and reporting workflows</li>
+<li>Built a strong foundation in production-grade engineering practices</li>
 </ul>
 </section>
 
@@ -263,6 +282,7 @@ GPA: <strong>8.6 / 10</strong>
 <section id="contact">
 <h2>Contact</h2>
 <p>
+Email: <strong>hariniramalingam2320@gmail.com</strong><br>
 GitHub:
 <a href="https://github.com/hariniramalingam2320-beep" target="_blank">
 github.com/hariniramalingam2320-beep
